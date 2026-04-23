@@ -5,13 +5,13 @@
 class K8scli < Formula
   desc "Kubernetes CLI helper tool"
   homepage "https://github.com/1985epma/k8scli"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/1985epma/k8scli/releases/download/v0.1.0/k8scli_0.1.0_darwin_amd64.tar.gz"
-      sha256 "ef4675b1d5a887acd0e39e5ce30b5ab188de9efd10b34b78642ff7fdc0fb28b9"
+      url "https://github.com/1985epma/k8scli/releases/download/v0.1.1/k8scli_0.1.1_darwin_amd64.tar.gz"
+      sha256 "874bc58d74a26d75fbfc24e246d2d10bc8bd8c7c152c1190c5802413200a87b7"
 
       define_method(:install) do
         bin.install "k8scli"
@@ -19,8 +19,8 @@ class K8scli < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/1985epma/k8scli/releases/download/v0.1.0/k8scli_0.1.0_darwin_arm64.tar.gz"
-      sha256 "3a07ec12faa7a7f93272651ecb83943317f2640078fc30aff93a4daf475cdf9f"
+      url "https://github.com/1985epma/k8scli/releases/download/v0.1.1/k8scli_0.1.1_darwin_arm64.tar.gz"
+      sha256 "2389539ace534c295ee0d4652aa07bc11fefeac4354ac781f068ad676d5c3184"
 
       define_method(:install) do
         bin.install "k8scli"
@@ -31,16 +31,16 @@ class K8scli < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/1985epma/k8scli/releases/download/v0.1.0/k8scli_0.1.0_linux_amd64.tar.gz"
-      sha256 "e3d92642da132349f61d94e69bfe97f0036e40995c777249334ab1f4a298aa12"
+      url "https://github.com/1985epma/k8scli/releases/download/v0.1.1/k8scli_0.1.1_linux_amd64.tar.gz"
+      sha256 "3091e49dd26f73152cd042152b5b4ecabf624578d15e1ced686c891f808f108f"
       define_method(:install) do
         bin.install "k8scli"
         generate_completions_from_executable(bin/"k8scli", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/1985epma/k8scli/releases/download/v0.1.0/k8scli_0.1.0_linux_arm64.tar.gz"
-      sha256 "c7917ff006fcd01c54123bdd2f787aa25706d84148a531280459d576da2adfb0"
+      url "https://github.com/1985epma/k8scli/releases/download/v0.1.1/k8scli_0.1.1_linux_arm64.tar.gz"
+      sha256 "b74c0eb091b8e5e1933d0dcb45592c8b3533b11f162566fca0464ea7b591e825"
       define_method(:install) do
         bin.install "k8scli"
         generate_completions_from_executable(bin/"k8scli", "completion")
